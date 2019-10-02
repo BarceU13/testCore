@@ -1,0 +1,41 @@
+
+<app-navbar></app-navbar>
+
+<div class="row" *ngIf="user">
+    <div class="col-lg-12 text-center">
+        <img width="100" class="text-center" [src]="imgSrc">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-8 offset-lg-2 text-center">
+        <table class="table striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Sexo</th>
+                    <th>Puesto</th>
+                    <th>Telefono</th>
+                    <th>Email</th>
+                    <th>Estatus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngIf="user">
+                    <td scope="row"> {{user.name}}  </td>
+                    <td scope="row"> {{user.lastName}}  </td>
+                    <td scope="row"> {{user.sex}}  </td>
+                    <td scope="row"> {{user.role}}  </td>
+                    <td scope="row"> {{user.telephone}}  </td>
+                    <td scope="row"> {{user.email}}  </td>  
+                    <td scope="row"> {{user.status}}  </td>             
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+      
